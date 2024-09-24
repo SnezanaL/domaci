@@ -1,0 +1,44 @@
+/* variable */
+$primary_font: "helvetica";
+
+/* map of colors */
+$colors: (
+  /* "key": value */ 
+  primary: #6c22a6,
+  secondary: #11235a,
+  info: #86b6f6,
+  warning: #f6eca9,
+  danger: #d04848,
+  success: #219c90,
+  light: whitesmoke,
+  dark: #333
+);
+
+/* map of dark colors */
+$dark_colors: (
+  primary: #6c22a6,
+  secondary: #11235a,
+  success: #219c90,
+  danger: #d04848,
+  dark: #333
+);
+
+
+/* map for spaces */
+$spaces: (
+    1: 0.5rem,
+    2: 0.8rem,
+    3: 1rem,
+    4: 1.5rem,
+    5: 2rem,
+    6: 3rem
+);
+
+
+/* map of shades */
+$shades: (
+    1: 5%,
+    2: 15%,
+    3: 30%,
+    4: 50%
+)

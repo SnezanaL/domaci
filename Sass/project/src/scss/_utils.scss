@@ -1,0 +1,101 @@
+/* mixin to check the contrast of bg-color and color */
+@mixin contrast($bg_color){
+    @if map-has-key($dark_colors, $bg_color){
+        color: map-get($colors, light);
+    }@else{
+        color: map-get($colors, dark)
+    }
+}
+
+
+/* generate classes for text color */
+@each $key, $value in $colors{
+    /* .text-primary */
+    .text-#{$key}{
+        color: $value;
+    }
+
+    /* .bg-primary */
+    .bg-#{$key}{
+        background: $value;
+    }
+    /* .btn-primary */
+    .btn-#{$key}{
+        background: $value;
+        @include contrast($key);
+    }
+    /* .btn-outline-primary */
+    .btn-outline-#{$key}{
+        background-color: transparent;
+        border: 2px solid $value;
+        cursor: pointer;
+
+        &:hover{
+            background-color: $value;
+            @include contrast($key);
+        }
+
+    }
+
+    @each $shade_key, $shade_value in $shades{
+        /* bg-primary-3 */
+        .bg-#{$key}-#{$shade_key}{
+            background: lighten($value, $shade_value);
+        }
+
+    }
+}
+
+/* padding classes */
+@each $name, $value in $spaces{
+    .p-#{$name}{
+        padding: $value;
+    }
+    .pl-#{$name}{
+        padding-left: $value;
+    }
+    .pr-#{$name}{
+        padding-right: $value;
+    }
+    .pt-#{$name}{
+        padding-top: $value;
+    }
+    .pb-#{$name}{
+        padding-bottom: $value;
+    }
+    .px-#{$name}{
+        padding-left: $value;
+        padding-right: $value;
+    }
+    .py-#{$name}{
+        padding-top: $value;
+        padding-bottom: $value;
+    } 
+}
+
+/* margin classes */
+@each $name, $value in $spaces{
+    .m-#{$name}{
+        margin: $value;
+    }
+    .ml-#{$name}{
+        margin-left: $value;
+    }
+    .mr-#{$name}{
+        margin-right: $value;
+    }
+    .mt-#{$name}{
+        margin-top: $value;
+    }
+    .mb-#{$name}{
+        margin-bottom: $value;
+    }
+    .mx-#{$name}{
+        margin-left: $value;
+        margin-right: $value;
+    }
+    .my-#{$name}{
+        margin-top: $value;
+        margin-bottom: $value;
+    } 
+}

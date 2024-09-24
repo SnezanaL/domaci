@@ -1,0 +1,134 @@
+@font-face {
+  font-family: NobileRegular;
+  src: url(./assets/fonts/Nobile/Nobile-Regular.ttf);
+}
+
+@font-face {
+  font-family: Quicksand;
+  src: url(./assets/fonts/Quicksand/Quicksand-VariableFont_wght.ttf);
+}
+
+body {
+  background-color: #ff4646;
+  font-family: NobileRegular;
+  margin: 0;
+}
+
+/* div {
+    font-family: NobileRegular;
+  } */
+
+header {
+  background-color: #ffffff;
+  color: #ff4646;
+  margin: 115px 0 50px;
+}
+
+nav {
+  display: flex;
+  padding: 10px 7%;
+  justify-content: space-between;
+  align-items: center;
+}
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+}
+nav ul li {
+  margin: 0 10px;
+}
+nav ul li a {
+  text-decoration: none;
+  color: #ff4646;
+  font-weight: 400;
+  font-size: 15px;
+  font-family: NobileRegular;
+  letter-spacing: -0.225px;
+}
+.login a:nth-child(1) {
+  background-color: #ffffff;
+  color: #ff4646;
+  padding: 10px 35px;
+  border-radius: 5px;
+  font-size: 15px;
+  font-family: NobileRegular;
+  letter-spacing: -0.225px;
+  border: 1px solid #ff4646;
+  font-weight: 500;
+  text-decoration: none;
+}
+.login a:nth-child(2) {
+  background-color: #ff4646;
+  color: #ffffff;
+  padding: 10px 35px;
+  border-radius: 5px;
+  font-size: 15px;
+  font-family: NobileRegular;
+  font-weight: 500;
+  letter-spacing: -0.225px;
+  border: 1px solid #ff4646;
+  text-decoration: none;
+  margin-left: 10px;
+}
+
+/* Section Search  */
+.search {
+  text-align: center;
+}
+.search-form {
+}
+.search input {
+  padding: 10px 0;
+  border: none;
+  color: #4a4a4a;
+
+  font-size: 11px;
+  outline: none;
+
+  font-family: NobileRegular;
+  width: 200px;
+  position: relative;
+  height: 9px;
+  border-radius: 18.5px 0 0 18.5px;
+  border: 1px solid #ffffff;
+  background: #fffcfc;
+}
+.input-wrapper {
+  display: inline-block;
+  position: relative;
+}
+
+.input-wrapper::after {
+  font-family: "Font Awesome 6 Free";
+  color: #ff4646;
+  position: absolute;
+  left: 8px;
+  top: 6px;
+  content: "\f002";
+  font-weight: 900;
+  font-size: 16px;
+}
+
+.search input::placeholder {
+  color: #4a4a4a;
+  font-size: 11px;
+  font-family: NobileRegular;
+  letter-spacing: -0.225px;
+  right: 10px;
+  position: absolute;
+}
+
+button.search-btn {
+  width: 70px;
+  height: 31px;
+  background-color: #ff4646;
+  border-radius: 0 18.5px 18.5px 0;
+  border: 1px solid #fff;
+  color: #ffffff;
+  padding-left: 0;
+  left: -5px;
+  position: relative;
+  top: 1px;
+}

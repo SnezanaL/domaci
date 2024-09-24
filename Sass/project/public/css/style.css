@@ -1,0 +1,785 @@
+/* variable */
+/* map of colors */
+/* map of dark colors */
+/* map for spaces */
+/* map of shades */
+/* variable */
+/* map of colors */
+/* map of dark colors */
+/* map for spaces */
+/* map of shades */
+/* ----------------------------------------------
+##  Reset Default Style ##
+------------------------------------------------*/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+article, aside, details, figcaption, figure, footer,
+header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1.3;
+  background: #eee;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+:root {
+  font-family: "helvetica";
+}
+
+/* Button Component */
+.btn {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+}
+
+/* mixin to check the contrast of bg-color and color */
+/* generate classes for text color */
+/* .text-primary */
+.text-primary {
+  color: #6c22a6;
+}
+
+/* .bg-primary */
+.bg-primary {
+  background: #6c22a6;
+}
+
+/* .btn-primary */
+.btn-primary {
+  background: #6c22a6;
+  color: whitesmoke;
+}
+
+/* .btn-outline-primary */
+.btn-outline-primary {
+  background-color: transparent;
+  border: 2px solid #6c22a6;
+  cursor: pointer;
+}
+.btn-outline-primary:hover {
+  background-color: #6c22a6;
+  color: whitesmoke;
+}
+
+/* bg-primary-3 */
+.bg-primary-1 {
+  background: #7a26bb;
+}
+
+/* bg-primary-3 */
+.bg-primary-2 {
+  background: #943dd7;
+}
+
+/* bg-primary-3 */
+.bg-primary-3 {
+  background: #b77de4;
+}
+
+/* bg-primary-3 */
+.bg-primary-4 {
+  background: #e6d1f6;
+}
+
+/* .text-primary */
+.text-secondary {
+  color: #11235a;
+}
+
+/* .bg-primary */
+.bg-secondary {
+  background: #11235a;
+}
+
+/* .btn-primary */
+.btn-secondary {
+  background: #11235a;
+  color: whitesmoke;
+}
+
+/* .btn-outline-primary */
+.btn-outline-secondary {
+  background-color: transparent;
+  border: 2px solid #11235a;
+  cursor: pointer;
+}
+.btn-outline-secondary:hover {
+  background-color: #11235a;
+  color: whitesmoke;
+}
+
+/* bg-primary-3 */
+.bg-secondary-1 {
+  background: #152b6f;
+}
+
+/* bg-primary-3 */
+.bg-secondary-2 {
+  background: #1d3c9a;
+}
+
+/* bg-primary-3 */
+.bg-secondary-3 {
+  background: #2d57d7;
+}
+
+/* bg-primary-3 */
+.bg-secondary-4 {
+  background: #839be7;
+}
+
+/* .text-primary */
+.text-info {
+  color: #86b6f6;
+}
+
+/* .bg-primary */
+.bg-info {
+  background: #86b6f6;
+}
+
+/* .btn-primary */
+.btn-info {
+  background: #86b6f6;
+  color: #333;
+}
+
+/* .btn-outline-primary */
+.btn-outline-info {
+  background-color: transparent;
+  border: 2px solid #86b6f6;
+  cursor: pointer;
+}
+.btn-outline-info:hover {
+  background-color: #86b6f6;
+  color: #333;
+}
+
+/* bg-primary-3 */
+.bg-info-1 {
+  background: #9ec4f8;
+}
+
+/* bg-primary-3 */
+.bg-info-2 {
+  background: #cde1fb;
+}
+
+/* bg-primary-3 */
+.bg-info-3 {
+  background: white;
+}
+
+/* bg-primary-3 */
+.bg-info-4 {
+  background: white;
+}
+
+/* .text-primary */
+.text-warning {
+  color: #f6eca9;
+}
+
+/* .bg-primary */
+.bg-warning {
+  background: #f6eca9;
+}
+
+/* .btn-primary */
+.btn-warning {
+  background: #f6eca9;
+  color: #333;
+}
+
+/* .btn-outline-primary */
+.btn-outline-warning {
+  background-color: transparent;
+  border: 2px solid #f6eca9;
+  cursor: pointer;
+}
+.btn-outline-warning:hover {
+  background-color: #f6eca9;
+  color: #333;
+}
+
+/* bg-primary-3 */
+.bg-warning-1 {
+  background: #f8f1c0;
+}
+
+/* bg-primary-3 */
+.bg-warning-2 {
+  background: #fdfbee;
+}
+
+/* bg-primary-3 */
+.bg-warning-3 {
+  background: white;
+}
+
+/* bg-primary-3 */
+.bg-warning-4 {
+  background: white;
+}
+
+/* .text-primary */
+.text-danger {
+  color: #d04848;
+}
+
+/* .bg-primary */
+.bg-danger {
+  background: #d04848;
+}
+
+/* .btn-primary */
+.btn-danger {
+  background: #d04848;
+  color: whitesmoke;
+}
+
+/* .btn-outline-primary */
+.btn-outline-danger {
+  background-color: transparent;
+  border: 2px solid #d04848;
+  cursor: pointer;
+}
+.btn-outline-danger:hover {
+  background-color: #d04848;
+  color: whitesmoke;
+}
+
+/* bg-primary-3 */
+.bg-danger-1 {
+  background: #d55c5c;
+}
+
+/* bg-primary-3 */
+.bg-danger-2 {
+  background: #e08585;
+}
+
+/* bg-primary-3 */
+.bg-danger-3 {
+  background: #efc2c2;
+}
+
+/* bg-primary-3 */
+.bg-danger-4 {
+  background: white;
+}
+
+/* .text-primary */
+.text-success {
+  color: #219c90;
+}
+
+/* .bg-primary */
+.bg-success {
+  background: #219c90;
+}
+
+/* .btn-primary */
+.btn-success {
+  background: #219c90;
+  color: whitesmoke;
+}
+
+/* .btn-outline-primary */
+.btn-outline-success {
+  background-color: transparent;
+  border: 2px solid #219c90;
+  cursor: pointer;
+}
+.btn-outline-success:hover {
+  background-color: #219c90;
+  color: whitesmoke;
+}
+
+/* bg-primary-3 */
+.bg-success-1 {
+  background: #25b1a3;
+}
+
+/* bg-primary-3 */
+.bg-success-2 {
+  background: #35d4c5;
+}
+
+/* bg-primary-3 */
+.bg-success-3 {
+  background: #74e2d7;
+}
+
+/* bg-primary-3 */
+.bg-success-4 {
+  background: #c9f3ef;
+}
+
+/* .text-primary */
+.text-light {
+  color: whitesmoke;
+}
+
+/* .bg-primary */
+.bg-light {
+  background: whitesmoke;
+}
+
+/* .btn-primary */
+.btn-light {
+  background: whitesmoke;
+  color: #333;
+}
+
+/* .btn-outline-primary */
+.btn-outline-light {
+  background-color: transparent;
+  border: 2px solid whitesmoke;
+  cursor: pointer;
+}
+.btn-outline-light:hover {
+  background-color: whitesmoke;
+  color: #333;
+}
+
+/* bg-primary-3 */
+.bg-light-1 {
+  background: white;
+}
+
+/* bg-primary-3 */
+.bg-light-2 {
+  background: white;
+}
+
+/* bg-primary-3 */
+.bg-light-3 {
+  background: white;
+}
+
+/* bg-primary-3 */
+.bg-light-4 {
+  background: white;
+}
+
+/* .text-primary */
+.text-dark {
+  color: #333;
+}
+
+/* .bg-primary */
+.bg-dark {
+  background: #333;
+}
+
+/* .btn-primary */
+.btn-dark {
+  background: #333;
+  color: whitesmoke;
+}
+
+/* .btn-outline-primary */
+.btn-outline-dark {
+  background-color: transparent;
+  border: 2px solid #333;
+  cursor: pointer;
+}
+.btn-outline-dark:hover {
+  background-color: #333;
+  color: whitesmoke;
+}
+
+/* bg-primary-3 */
+.bg-dark-1 {
+  background: #404040;
+}
+
+/* bg-primary-3 */
+.bg-dark-2 {
+  background: #595959;
+}
+
+/* bg-primary-3 */
+.bg-dark-3 {
+  background: gray;
+}
+
+/* bg-primary-3 */
+.bg-dark-4 {
+  background: #b3b3b3;
+}
+
+/* padding classes */
+.p-1 {
+  padding: 0.5rem;
+}
+
+.pl-1 {
+  padding-left: 0.5rem;
+}
+
+.pr-1 {
+  padding-right: 0.5rem;
+}
+
+.pt-1 {
+  padding-top: 0.5rem;
+}
+
+.pb-1 {
+  padding-bottom: 0.5rem;
+}
+
+.px-1 {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.py-1 {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.p-2 {
+  padding: 0.8rem;
+}
+
+.pl-2 {
+  padding-left: 0.8rem;
+}
+
+.pr-2 {
+  padding-right: 0.8rem;
+}
+
+.pt-2 {
+  padding-top: 0.8rem;
+}
+
+.pb-2 {
+  padding-bottom: 0.8rem;
+}
+
+.px-2 {
+  padding-left: 0.8rem;
+  padding-right: 0.8rem;
+}
+
+.py-2 {
+  padding-top: 0.8rem;
+  padding-bottom: 0.8rem;
+}
+
+.p-3 {
+  padding: 1rem;
+}
+
+.pl-3 {
+  padding-left: 1rem;
+}
+
+.pr-3 {
+  padding-right: 1rem;
+}
+
+.pt-3 {
+  padding-top: 1rem;
+}
+
+.pb-3 {
+  padding-bottom: 1rem;
+}
+
+.px-3 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.py-3 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.p-4 {
+  padding: 1.5rem;
+}
+
+.pl-4 {
+  padding-left: 1.5rem;
+}
+
+.pr-4 {
+  padding-right: 1.5rem;
+}
+
+.pt-4 {
+  padding-top: 1.5rem;
+}
+
+.pb-4 {
+  padding-bottom: 1.5rem;
+}
+
+.px-4 {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.py-4 {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+.p-5 {
+  padding: 2rem;
+}
+
+.pl-5 {
+  padding-left: 2rem;
+}
+
+.pr-5 {
+  padding-right: 2rem;
+}
+
+.pt-5 {
+  padding-top: 2rem;
+}
+
+.pb-5 {
+  padding-bottom: 2rem;
+}
+
+.px-5 {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.py-5 {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.p-6 {
+  padding: 3rem;
+}
+
+.pl-6 {
+  padding-left: 3rem;
+}
+
+.pr-6 {
+  padding-right: 3rem;
+}
+
+.pt-6 {
+  padding-top: 3rem;
+}
+
+.pb-6 {
+  padding-bottom: 3rem;
+}
+
+.px-6 {
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+
+.py-6 {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+/* margin classes */
+.m-1 {
+  margin: 0.5rem;
+}
+
+.ml-1 {
+  margin-left: 0.5rem;
+}
+
+.mr-1 {
+  margin-right: 0.5rem;
+}
+
+.mt-1 {
+  margin-top: 0.5rem;
+}
+
+.mb-1 {
+  margin-bottom: 0.5rem;
+}
+
+.mx-1 {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+.my-1 {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.m-2 {
+  margin: 0.8rem;
+}
+
+.ml-2 {
+  margin-left: 0.8rem;
+}
+
+.mr-2 {
+  margin-right: 0.8rem;
+}
+
+.mt-2 {
+  margin-top: 0.8rem;
+}
+
+.mb-2 {
+  margin-bottom: 0.8rem;
+}
+
+.mx-2 {
+  margin-left: 0.8rem;
+  margin-right: 0.8rem;
+}
+
+.my-2 {
+  margin-top: 0.8rem;
+  margin-bottom: 0.8rem;
+}
+
+.m-3 {
+  margin: 1rem;
+}
+
+.ml-3 {
+  margin-left: 1rem;
+}
+
+.mr-3 {
+  margin-right: 1rem;
+}
+
+.mt-3 {
+  margin-top: 1rem;
+}
+
+.mb-3 {
+  margin-bottom: 1rem;
+}
+
+.mx-3 {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.my-3 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.m-4 {
+  margin: 1.5rem;
+}
+
+.ml-4 {
+  margin-left: 1.5rem;
+}
+
+.mr-4 {
+  margin-right: 1.5rem;
+}
+
+.mt-4 {
+  margin-top: 1.5rem;
+}
+
+.mb-4 {
+  margin-bottom: 1.5rem;
+}
+
+.mx-4 {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+
+.my-4 {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.m-5 {
+  margin: 2rem;
+}
+
+.ml-5 {
+  margin-left: 2rem;
+}
+
+.mr-5 {
+  margin-right: 2rem;
+}
+
+.mt-5 {
+  margin-top: 2rem;
+}
+
+.mb-5 {
+  margin-bottom: 2rem;
+}
+
+.mx-5 {
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
+.my-5 {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.m-6 {
+  margin: 3rem;
+}
+
+.ml-6 {
+  margin-left: 3rem;
+}
+
+.mr-6 {
+  margin-right: 3rem;
+}
+
+.mt-6 {
+  margin-top: 3rem;
+}
+
+.mb-6 {
+  margin-bottom: 3rem;
+}
+
+.mx-6 {
+  margin-left: 3rem;
+  margin-right: 3rem;
+}
+
+.my-6 {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+/*# sourceMappingURL=style.css.map */

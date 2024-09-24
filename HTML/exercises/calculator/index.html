@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Calculator</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="calculator">
+      <input
+        type="text"
+        id="display"
+        placeholder="0"
+      />
+      <button class="top">AC</button>
+      <button class="top">+/-</button>
+      <button class="top">%</button>
+      <button class="operator">/</button>
+      <button>7</button>
+      <button>8</button>
+      <button>9</button>
+      <button class="operator">*</button>
+      <button>4</button>
+      <button>5</button>
+      <button>6</button>
+      <button class="operator">-</button>
+      <button>1</button>
+      <button>2</button>
+      <button>3</button>
+
+      <button class="operator">+</button>
+      <button class="double">0</button>
+      <button>.</button>
+      <button
+        class="operator"
+        onclick="calculate()"
+      >
+        =
+      </button>
+    </div>
+
+    <script>
+      var display =
+        document.getElementById("display");
+      var buttons =
+        document.querySelectorAll("button");
+      var operand1 = 0;
+      var operand2 = null;
+      var operator = null;
+
+      for (var i = 0; i < buttons.length; i++) {
+        buttons[i].addEventListener(
+          "click",
+          function () {
+            var value =
+              this.getAttribute("data-value");
+            if (value == "AC") {
+              display.value = "";
+            } else if (value == "+/-") {
+              operand1 = parseFloat(
+                display.value
+              );
+              operand1 = -1 * operand1;
+              display.value = operand1;
+            } else if (value == "%") {
+              operand1 = parseFloat(
+                display.value
+              );
+              operand1 = operand1 / 100;
+              display.value = operand1;
+            } else if (value == ".") {
+              if (display.value == "") {
+                display.value = "0.";
+              } else if (
+                display.value.indexOf(".") == -1
+              ) {
+                display.value =
+                  display.value + ".";
+              }
+            } else if (value == "=") {
+              operand2 = parseFloat(
+                display.value
+              );
+              var result = eval(
+                operand1 +
+                  " " +
+                  operator +
+                  " " +
+                  operand2
+              );
+              if (result) {
+                display.value = result;
+                operand1 = result;
+                operand2 = null;
+                operator = null;
+              }
+            } else {
+              if (operator == null) {
+                operand1 = parseFloat(
+                  display.value
+                );
+                operator = value;
+                display.value = "";
+              } else {
+                operand2 = parseFloat(
+                  display.value
+                );
+                var result = eval(
+                  operand1 +
+                    " " +
+                    operator +
+                    " " +
+                    operand2
+                );
+                if (result) {
+                  display.value = result;
+                  operand1 = result;
+                  operand2 = null;
+                  operator = null;
+                }
+              }
+            }
+          }
+        );
+      }
+    </script>
+    <script>
+      function calculate() {
+        var display =
+          document.getElementById("display");
+        try {
+          display.value = eval(display.value);
+        } catch (error) {
+          display.value = "Error";
+        }
+      }
+    </script>
+  </body>
+</html>
